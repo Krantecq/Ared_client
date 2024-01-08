@@ -23,7 +23,7 @@ const NeutraliseScreen = ({route, navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={COLORS.transparent} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
         <BackTopbar name={'Neutralise'} />
       </View>

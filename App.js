@@ -20,6 +20,7 @@ import PaymentScreen from './src/BottomTabsScreen/PaymentScreen';
 import SuccessfullScreen from './src/BottomTabsScreen/SuccessfullScreen';
 import CustomeScreen from './src/BottomTabsScreen/CustomeScreen';
 import CarbonCalculater from './src/BottomTabsScreen/CarbonCalculater';
+import LoginScreen from './src/OnboardingScreen/LoginScreen';
 
 const Stack = createStackNavigator();
 
@@ -47,7 +48,6 @@ const App = () => {
           name="IndiviualCalculater"
           component={IndiviualCalculater}
         />
-        
         <Stack.Screen
           name="NewOnboardingScreen"
           component={NewOnboardingScreen}
@@ -58,6 +58,7 @@ const App = () => {
         <Stack.Screen name="SuccessfullScreen" component={SuccessfullScreen} />
         <Stack.Screen name="CustomeScreen" component={CustomeScreen} />
         <Stack.Screen name="CarbonCalculater" component={CarbonCalculater} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

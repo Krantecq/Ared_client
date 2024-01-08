@@ -17,7 +17,7 @@ const LearningScreen = () => {
   console.log(Learning);
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
         <TopNavbar />
       </View>

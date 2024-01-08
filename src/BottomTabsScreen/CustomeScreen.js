@@ -17,7 +17,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 const CustomeScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={COLORS.transparent} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
         <BackTopbar name={'Neutralise'} />
       </View>

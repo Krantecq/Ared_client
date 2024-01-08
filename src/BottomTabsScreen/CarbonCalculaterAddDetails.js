@@ -15,7 +15,7 @@ import CommonTextInputContainer from '../../components/CommonTextInputContainer'
 const CarbonCalculaterAddDetails = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
         <BackTopbar name={'Add details'} />
       </View>

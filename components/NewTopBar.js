@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {
   IconComponet,
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: SIZES.width * 0.026,
+    marginTop:
+      Platform.OS === 'ios' ? SIZES.width * 0.026 : SIZES.width * 0.026,
   },
 });

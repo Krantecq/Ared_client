@@ -45,51 +45,50 @@ const OtpScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        behavior={Platform.OS === 'ios' ? 'padding' : 40}
         style={{flex: 1}}>
-           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={{flex: 1}}>
-          <View>
-            <BackTopbarNew name={'One step to complete verification '} />
-          </View>
-          <ScrollView
-            contentContainerStyle={{flexGrow: 1}}
-            keyboardShouldPersistTaps="handled">
-            <View style={styles.mainContainer}>
-              <View>
-                <Text style={styles.optText}>Enter your OTP</Text>
-              </View>
-              <TouchableOpacity
-                style={styles.changeContainer}
-                onPress={() => navigation.goBack()}>
-                <Text style={styles.changeText}>
-                  Change your mobile number?
-                </Text>
-              </TouchableOpacity>
-              <View style={{marginTop: SIZES.width * 0.05}}>
-                <Otpcontainer />
-              </View>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <View style={{flex: 1}}>
+            <View>
+              <BackTopbarNew name={'One step to complete verification '} />
             </View>
-            
-            <View style={styles.bottomContainer}>
-              <View style={styles.resendContainer}>
-                <TouchableOpacity onPress={handleResend}>
-                  <Text style={styles.otpText}>Resend OTP</Text>
+            <ScrollView
+              contentContainerStyle={{flexGrow: 1}}
+              keyboardShouldPersistTaps="handled">
+              <View style={styles.mainContainer}>
+                <View>
+                  <Text style={styles.optText}>Enter your OTP</Text>
+                </View>
+                <TouchableOpacity
+                  style={styles.changeContainer}
+                  onPress={() => navigation.goBack()}>
+                  <Text style={styles.changeText}>
+                    Change your mobile number?
+                  </Text>
+                </TouchableOpacity>
+                <View style={{marginTop: SIZES.width * 0.05}}>
+                  <Otpcontainer />
+                </View>
+              </View>
+
+              <View style={styles.bottomContainer}>
+                <View style={styles.resendContainer}>
+                  <TouchableOpacity onPress={handleResend}>
+                    <Text style={styles.otpText}>Resend OTP</Text>
+                  </TouchableOpacity>
+                </View>
+                <TouchableOpacity
+                  style={styles.circleContainer}
+                  onPress={() => navigation.navigate('SignUpScreen')}>
+                  <Icon name="chevron-thin-right" size={24} color={'#fff'} />
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity
-                style={styles.circleContainer}
-                onPress={() => navigation.navigate('SignUpScreen')}>
-                <Icon name="chevron-thin-right" size={24} color={'#fff'} />
-              </TouchableOpacity>
-            </View>
-          </ScrollView>
-        </View>
-      </TouchableWithoutFeedback>
-        </KeyboardAvoidingView>
-     
+            </ScrollView>
+          </View>
+        </TouchableWithoutFeedback>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };

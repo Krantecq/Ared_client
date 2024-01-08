@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
     borderColor: COLORS.borderColor,
     justifyContent: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
   },
   title: {

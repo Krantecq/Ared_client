@@ -24,10 +24,9 @@ import {
 import FooterImage from '../../components/FooterImage';
 
 const ProfileScreen = ({navigation}) => {
-
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
         <TopNavbar />
       </View>

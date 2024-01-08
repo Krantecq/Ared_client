@@ -19,7 +19,7 @@ import * as Animatable from 'react-native-animatable';
 const NewLoginScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.imageContainer}>
           <View style={styles.equalContainer}>
@@ -105,7 +105,7 @@ const NewLoginScreen = ({navigation}) => {
               <Text style={styles.socialText}>Continue with google</Text>
             </TouchableOpacity>
           </View>
-          <View style={{marginTop: SIZES.width * 0.08}}>
+          <View style={{marginTop: SIZES.width * 0.05}}>
             <TouchableOpacity style={styles.socialBtn}>
               <Apple />
               <Text style={styles.socialText}>Continue with Apple</Text>

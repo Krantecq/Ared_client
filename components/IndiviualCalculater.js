@@ -58,11 +58,10 @@ const IndiviualCalculater = () => {
     navigation.navigate('ProjectScreen');
   };
 
-
   if (result === true) {
     return (
       <SafeAreaView style={styles.container}>
-        <StatusBar backgroundColor={COLORS.transparent} />
+        <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
         <View style={{flex: 1, alignItems: 'center'}}>
           <View style={{marginTop: SIZES.width * 0.256}}>
             <Text style={styles.title1}>
@@ -106,7 +105,7 @@ const IndiviualCalculater = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View style={styles.mainContainer}>
         <View style={styles.barContainer}>
           <View>
@@ -270,7 +269,7 @@ const styles = StyleSheet.create({
   },
   resultContainer: {
     width: '100%',
-    height: SIZES.width * 1.1,
+    height: SIZES.width * 1.13,
     alignItems: 'center',
     backgroundColor: '#effff7',
     borderRadius: 200,

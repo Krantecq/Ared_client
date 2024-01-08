@@ -16,9 +16,9 @@ import TableComponent from '../../components/TableComponent';
 const SuccessfullScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={COLORS.transparent} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
-        <BackTopbar name={'Congratulations'} specify={'BottomTabScreen'}/>
+        <BackTopbar name={'Congratulations'} specify={'BottomTabScreen'} />
       </View>
       <ScrollView
         style={{marginBottom: SIZES.width * 0.026}}
@@ -48,7 +48,6 @@ const SuccessfullScreen = () => {
               </TouchableOpacity>
             </View>
           </View>
-          
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -11,6 +11,7 @@ import {
 import {COLORS, SIZES} from '../constant';
 import {useNavigation} from '@react-navigation/native';
 import * as Animatable from 'react-native-animatable';
+console.log(SIZES.width * 0.25);
 
 const RenewableProjectList = ({data}) => {
   const naviagtion = useNavigation();
@@ -59,6 +60,7 @@ const RenewableProjectList = ({data}) => {
       keyExtractor={item => item.id.toString()}
       bounces={true}
       contentContainerStyle={styles.flatListContent}
+      style={{marginBottom: SIZES.width * 0.25}}
     />
   );
 };

@@ -6,8 +6,10 @@ import {
   TouchableOpacity,
   ScrollView,
   Platform,
+  Image,
+  ImageBackground,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {COLORS, SIZES} from '../../constant';
 import PriceContainer from '../../components/PriceContainer';
 import DashboardthreeComponent from '../../components/DashboardthreeComponent';
@@ -15,31 +17,31 @@ import DashboardDistributer from '../../components/DashboardDistributer';
 import ProjectContainer from '../../components/ProjectContainer';
 import {project} from '../../constant/data';
 import NewTopBar from '../../components/NewTopBar';
-import Video from 'react-native-video';
-import Light from '../../assets/images/forest.mp4';
 
 const DashboardScreen = () => {
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.mainBoxContainer}>
-          <Video
-            source={Light}
-            style={styles.videoPlayer}
-            repeat={true}
-            resizeMode="cover"
-          />
-          <View>
-            <NewTopBar />
-          </View>
-          <View
-            style={{
-              marginTop: Platform.OS ? SIZES.width * 0.16 : SIZES.width * 0.104,
-            }}>
-            <PriceContainer />
-          </View>
+          <ImageBackground
+            source={require('../../assets/images/preImage.png')}
+            style={styles.videoPlayer}>
+            <View>
+              <NewTopBar />
+            </View>
+            <View
+              style={{
+                marginTop:
+                  Platform.OS === 'ios'
+                    ? SIZES.width * 0.16
+                    : SIZES.width * 0.15,
+              }}>
+              <PriceContainer />
+            </View>
+          </ImageBackground>
         </View>
+
         <View style={{marginTop: -SIZES.width * 0.051}}>
           <DashboardthreeComponent />
         </View>
@@ -89,7 +91,7 @@ const styles = StyleSheet.create({
   },
   mainBoxContainer: {
     width: '100%',
-    height: Platform.OS ? SIZES.width * 1.03 : SIZES.width * 0.8,
+    height: Platform.OS === 'android' ? SIZES.width * 1.03 : SIZES.width * 0.8,
     paddingTop: Platform.OS ? SIZES.width * 0.13 : 0,
   },
   videoPlayer: {

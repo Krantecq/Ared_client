@@ -16,7 +16,7 @@ const Splash = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.replace('NewOnboardingScreen');
+      navigation.replace('LoginScreen');
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -24,7 +24,7 @@ const Splash = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={COLORS.primary} />
+      <StatusBar backgroundColor={'#33FF9B'} />
       <View style={styles.sideDivider}>
         <View style={styles.imageContainer}>
           <Image

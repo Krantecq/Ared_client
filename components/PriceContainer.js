@@ -8,6 +8,7 @@ import {
 
 const PriceContainer = () => {
   const [show, setShow] = useState(true);
+  console.log(SIZES.width * 0.087);
   return (
     <View style={styles.container}>
       <View style={{alignItems: 'center'}}>
@@ -36,18 +37,18 @@ const styles = StyleSheet.create({
   },
   title: {
     color: COLORS.white,
-    fontSize: 27,
+    fontSize: SIZES.width * 0.063,
     fontWeight: '300',
     marginBottom: SIZES.width * 0.015,
   },
   title2: {
     color: COLORS.white,
-    fontSize: 15,
+    fontSize: SIZES.width * 0.035,
     fontWeight: '300',
   },
   price: {
     color: '#fff',
-    fontSize: 37,
+    fontSize: SIZES.width * 0.087,
     fontWeight: '600',
     lineHeight: SIZES.width * 0.102,
     letterSpacing: -0.5,
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   },
   price2: {
     color: '#fff',
-    fontSize: 21,
+    fontSize: SIZES.width * 0.05,
     fontWeight: '600',
     lineHeight: SIZES.width * 0.102,
     letterSpacing: -0.5,

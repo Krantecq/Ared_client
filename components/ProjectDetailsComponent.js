@@ -54,7 +54,7 @@ const ProjectDetailsComponent = ({route}) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor={COLORS.transparent} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <ScrollView
         style={{marginBottom: SIZES.width * 0.07}}
         showsVerticalScrollIndicator={false}>

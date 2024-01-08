@@ -14,7 +14,7 @@ import Svg, {Path, Defs, ClipPath, Rect, Line} from 'react-native-svg';
 const OnboardScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
         <BackTopbar name={'Onboard'} />
       </View>

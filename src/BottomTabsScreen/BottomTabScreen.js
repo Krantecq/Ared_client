@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { View, TouchableOpacity, Platform} from 'react-native';
+import {View, TouchableOpacity, Platform} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DashboardScreen from './DashboardScreen';
@@ -111,7 +111,7 @@ const BottomTabScreen = () => {
           height: SIZES.height * 0.121,
           borderRadius: 0,
           // borderTopWidth: 0,
-          elevation:  Platform.OS === 'ios' ? 3 : 20,
+          elevation: Platform.OS === 'ios' ? 3 : 20,
           paddingHorizontal: SIZES.width * 0.028,
           shadowOffset: {
             shadowOffset: {
@@ -173,4 +173,3 @@ const BottomTabScreen = () => {
 };
 
 export default BottomTabScreen;
-

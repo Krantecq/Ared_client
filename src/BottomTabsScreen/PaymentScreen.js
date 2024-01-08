@@ -18,7 +18,7 @@ const PaymentScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={COLORS.transparent} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
         <CancelTopbar name={'Payment'} />
       </View>
@@ -53,7 +53,7 @@ const PaymentScreen = ({navigation}) => {
                   flexDirection: 'row',
                   alignItems: 'center',
                   borderColor:
-                    selectedPayment === 'card' ? '#00EA77' : 'transparent',
+                    selectedPayment === 'card' ? '#00EA77' : COLORS.borderColor,
                 },
               ]}
               onPress={() => setSelectedPayment('card')}>
@@ -90,7 +90,7 @@ const PaymentScreen = ({navigation}) => {
                 styles.paymentBox,
                 {
                   borderColor:
-                    selectedPayment === 'bank' ? '#00EA77' : 'transparent',
+                    selectedPayment === 'bank' ? '#00EA77' : COLORS.borderColor,
                 },
               ]}
               onPress={() => setSelectedPayment('bank')}>

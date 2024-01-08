@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable react/no-unstable-nested-components */
 import React, {useState, useEffect} from 'react';
 import {
   SafeAreaView,
@@ -14,10 +16,10 @@ import {
   ImageBackground,
 } from 'react-native';
 import {COLORS, SIZES} from '../../constant';
-const {width, height} = Dimensions.get('window');
 import Svg, {G, Circle, Rect} from 'react-native-svg';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {slides} from '../../constant/data';
+const {width, height} = Dimensions.get('window');
 
 const NewOnboardingScreen = ({navigation}) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -66,7 +68,7 @@ const NewOnboardingScreen = ({navigation}) => {
             style={{width: '100%', height: '100%', resizeMode: 'contain'}}
           />
         </View>
-        <View style={styles.spaceContainer} />
+        {/* <View style={styles.spaceContainer} /> */}
         <View style={styles.circleContainer2}>
           <ImageBackground
             source={require('../../assets/images/rect.png')}
@@ -109,7 +111,7 @@ const NewOnboardingScreen = ({navigation}) => {
             left: SIZES.width * 0.051,
             shadowColor: '#000',
             shadowOffset: {width: 0, height: 0},
-            shadowOpacity: 0.,
+            shadowOpacity: 0,
             shadowRadius: 6,
           }}>
           <TouchableOpacity
@@ -178,7 +180,7 @@ const NewOnboardingScreen = ({navigation}) => {
         <FlatList
           ref={ref}
           onMomentumScrollEnd={updateCurrentSlideIndex}
-          // contentContainerStyle={{height: height}}
+          contentContainerStyle={{height: height}}
           showsHorizontalScrollIndicator={false}
           horizontal
           data={slides}
@@ -224,7 +226,7 @@ const styles = StyleSheet.create({
     left: SIZES.width * 0.15,
     top: SIZES.width * 0.38,
     zIndex: 1,
-    // backgroundColor:'grey'
+    backgroundColor: 'grey',
   },
   btn: {
     position: 'absolute',

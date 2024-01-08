@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
+  Platform,
 } from 'react-native';
 import React from 'react';
 import {COLORS, SIZES} from '../../constant';
@@ -17,7 +18,7 @@ const AboutScreen = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View style={styles.imageContainer}>
         <Image
           source={require('../../assets/images/tree.png')}

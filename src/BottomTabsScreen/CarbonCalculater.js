@@ -17,7 +17,7 @@ const CarbonCalculater = ({navigation}) => {
   console.log(SIZES.width * 0.035, 's');
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor={'transparent'} />
+      <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
       <View>
         <BackTopbar name={'Calculate your footprint'} />
       </View>

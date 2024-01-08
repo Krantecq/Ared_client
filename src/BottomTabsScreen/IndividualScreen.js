@@ -35,7 +35,7 @@ const IndividualScreen = ({navigation}) => {
   if (support == true) {
     return (
       <SafeAreaView style={styles.container}>
-        <StatusBar backgroundColor={'transparent'} />
+        <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
         <View>
           <BackTopbar name={'Successful'} />
         </View>
